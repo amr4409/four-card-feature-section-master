@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  // ### Primary
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  // ### Neutral
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+}
+
+main {
+  header {
+    text-align: center;
+    padding-bottom: 50px;
+    h1 {
+      font-size: 35px;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 30px;
+      color: var(--Very-Dark-Blue);
+      &::first-line {
+        font-weight: 200;
+      }
+    }
+    p {
+      max-width: 550px;
+      text-align: center;
+      color: var(--Grayish-Blue);
+      font-weight: 400;
+      margin: auto;
+    }
+  }
+  @media (max-width: 375px) {
+    & {
+      padding: 100px 30px;
+      header {
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .card {
+      width: 350px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      box-shadow: 0px 11px 20px 0 #00000025;
+      padding: 25px;
+      border-top: 4px var(--cl) solid;
+      .text {
+        h3 {
+          color: var(--Very-Dark-Blue);
+          margin-bottom: 10px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p {
+          color: var(--Grayish-Blue);
+          font-size: 15px;
+        }
+        margin-bottom: 30px;
+      }
+      .image {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    @media (max-width:375px) {
+      & {
+        flex-direction: column;
+        .card {
+          width: 310px;
+        }
+      }
+    }
+  }
+}
